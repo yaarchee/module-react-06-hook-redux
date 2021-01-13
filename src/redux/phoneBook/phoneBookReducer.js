@@ -3,7 +3,7 @@ import { createReducer } from '@reduxjs/toolkit';
 import actions from '../phoneBook/phoneBookActions';
 
 const initState = {
-  items: JSON.parse(localStorage.getItem('contactsh')),
+  items: JSON.parse(localStorage.getItem('contactsh')) || [],
 };
 const changeLocalStorage = (arr) =>
   localStorage.setItem('contactsh', JSON.stringify(arr));
